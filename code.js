@@ -1,7 +1,7 @@
 function augmentingPath(graph, start, end) {
-    // use a queue to store paths visited
+    // use a queue to store paths visited (chatGPT assisted)
     let queue = [];
-    // mark nodes as visited by adding them to a set
+    // mark nodes as visited by adding them to a set (chatGPT assisted)
     let marked = new Set();
 
     // first path visited is the start node to the start node
@@ -25,13 +25,13 @@ function augmentingPath(graph, start, end) {
         if (graph[currentNode]) {
             // loop over all neighbors to our current node
             for (let neighbor in graph[currentNode]) {
-                // make sure nodes we check have not yet been marked
+                // make sure nodes we check have not yet been marked (chatGPT assisted)
                 if(!marked.has(neighbor)) {
                     // create a new path consisting of our current path and the neighbor to the last node for each loop
                     let nextPath = [...currentPath, neighbor];
                     // add each new path to our queue
                     queue.push(nextPath);
-                    // mark each neighbor added to a path as visited
+                    // mark each neighbor added to a path as visited (chatGPT assisted)
                     marked.add(neighbor);
                 }
             }
