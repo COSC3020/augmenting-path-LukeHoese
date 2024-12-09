@@ -2,7 +2,7 @@ function augmentingPath(graph, start, end) {
     // use a queue to store paths visited (chatGPT assisted)
     let queue = [];
     // mark nodes as visited by adding them to a set (chatGPT assisted)
-    let marked = new Set();
+    let marked = {};
 
     // first path visited is the start node to the start node
     queue.push([start]);
