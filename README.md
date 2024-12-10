@@ -28,7 +28,7 @@ The call would return `['foo', 'boo', 'bar']`.
 Feel free to use other data structures, but you'll have to change the test code
 accordingly.
 
-Was unsure where to start so asked chatGPT which recommended using a queue to store visited paths. Minor help from chatGPT with working with data structures and debugging, no major changes. This code specifically has lots of lines marked as receiving help, but it was mostly just queue functions I didn't know about.
+Was unsure where to start so asked chatGPT which recommended using a queue to store visited paths/breadth first search. Minor help from chatGPT with working with data structures and debugging, no major changes. This code specifically has lots of lines marked as receiving help, but it was mostly just queue functions I didn't know about.
 
 I certify that I have listed all sources used to complete this exercise, including the use of any Large Language Models. All of the work is my own, except where stated otherwise. I am aware that plagiarism carries severe penalties and that if plagiarism is suspected, charges may be filed against me without prior notice.
 
@@ -36,3 +36,5 @@ I certify that I have listed all sources used to complete this exercise, includi
 
 What is the worst-case big $\Theta$ complexity of your implementation? Add your
 answer, including your reasoning, to this markdown file.
+
+The worst case big $\Theta$ complexity of my implementation is $\Theta$(V + E) this is because we would iterate over each vertex (V), marking as we go so no vertices are revisited, and for each vertex, we iterate over all its neighbors, which by the end is every edge (E).
